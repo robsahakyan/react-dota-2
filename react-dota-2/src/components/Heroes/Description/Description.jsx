@@ -4,6 +4,7 @@ import "./Description.css"
 
 const Description = () => {
     const { t } = useTranslation();
+    
     return (
         <div className="Description">
             <h1 className = "CYH">{t("choose_your_hero")}</h1>

@@ -5,26 +5,21 @@ import {AiFillCaretRight,AiFillCaretLeft} from "react-icons/ai"
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
-
-
-export const AboutHero = ({allHeroes,...props}) => {
-
+const AboutHero = ({allHeroes,...props}) => {
     const { t } = useTranslation();
     const urlRootHeroes = "https://api.opendota.com";
     const urlAbility = "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/icons/hero_";
+    const item = props.currentHero;
     let currentAbilityIcon,currentAbilityName;
     let rolesList = ["Carry","Support","Nuker","Disabler","Jungler","Durable","Escape","Pusher","Initiator"];
-    const item = props.currentHero;
-    console.log(item);
+    let indexOfItem = allHeroes.findIndex( e => e.id === item.id);
+    let prevHero = (indexOfItem === 0) ? allHeroes[allHeroes.length - 1] : allHeroes[(indexOfItem -1)];
+    let nextHero = (indexOfItem === allHeroes.length - 1) ? allHeroes[0] : allHeroes[(indexOfItem + 1)];
     
     useEffect(() => {
       window.scrollTo(0,0);  
       }, [item])
     
-    let indexOfItem = allHeroes.findIndex( e => e.id === item.id);
-    let prevHero = (indexOfItem === 0) ? allHeroes[allHeroes.length - 1] : allHeroes[(indexOfItem -1)];
-    let nextHero = (indexOfItem === allHeroes.length - 1) ? allHeroes[0] : allHeroes[(indexOfItem + 1)];
-   
     switch(item.primary_attr) {
         case "agi" :
             currentAbilityName = "agility";
@@ -44,7 +39,6 @@ export const AboutHero = ({allHeroes,...props}) => {
     <>
         <div className="aboutHero" key={item.id}>
             <div className="rotatedDiv">
-                
                 <img className="rotatedImg" src={currentAbilityIcon} alt = {currentAbilityName}></img>
                 <div>
                     <h2 className="rotatedHeading">{item.localized_name}</h2>
@@ -101,7 +95,6 @@ export const AboutHero = ({allHeroes,...props}) => {
                         </div>
                     </div>
                 </div>
-               
                 <div id="part2" className="Parts">
                     <hr className="lineHr" />
                     <div className="infoHeading">
@@ -121,8 +114,7 @@ export const AboutHero = ({allHeroes,...props}) => {
                           }
                         )}
                     </div>
-                </div> 
-                
+                </div>                 
                 <div id="part3" className="Parts">
                     <hr className="lineHr" />
                     <div className="infoHeading">
@@ -236,3 +228,5 @@ export const AboutHero = ({allHeroes,...props}) => {
     </>
     )
 }
+
+export default AboutHero

@@ -75,7 +75,8 @@ h2,h3 {
     font-family: Arial, Helvetica, sans-serif;
     color: whitesmoke;
     text-transform: uppercase;
-    max-width: fit-content;
+    max-width: 30rem;
+   
 }
 .abilityIconHeading {
     width: 2rem;
@@ -429,6 +430,9 @@ a.allHeroesLink > div {
     .linksImg {
         width: 15rem;
     }
+    .nameHeading {
+        text-align: -webkit-center;
+    }
 }
 @media screen and (max-width: 900px) {
     .futLinkAttType {
@@ -487,13 +491,17 @@ a.allHeroesLink > div {
         width: 100%;
     }
     .prevHeroLink , .nextHeroLink {
-        width: 30%;
+        width: calc(100%/3);
     }
     .allHeroesLink {
         width: 30%;
     }
+    .nextLink {
+        justify-content: space-evenly;
+    }
 }
 @media screen and (max-width: 510px) {
+  
     .linksImg {
         height: 8rem;
         width: 100%;
@@ -504,5 +512,6 @@ a.allHeroesLink > div {
     }
     .nameHeading {
         font-size: 3.5rem;
+        
     }
 }

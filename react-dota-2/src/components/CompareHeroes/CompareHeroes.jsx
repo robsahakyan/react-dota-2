@@ -5,18 +5,15 @@ import "./CompareHeroes.css"
 import { useTranslation } from "react-i18next"
 
 export const CompareHeroes = (props) => {
-  
     const { t } = useTranslation();
     const [unSetItem,setedItem] = useState( {
         comparedHero1: null,
         comparedHero2: null
     });
-    
 
     useEffect(()=> {
         props.getHeroes();
     },[])
-
     useEffect(()=> {
         props.addComparedHero(unSetItem);
         props.deleteComparedHero(unSetItem);
@@ -58,17 +55,17 @@ export const CompareHeroes = (props) => {
         }
     }
     const onDragHandler = (e) => {
-
         e.dataTransfer.setData("cardHero",e.target.id);
-
     }
     const droppedHero = (e,id) => {
         e.preventDefault();
+        
         let droppedHeroId = props.allHeroes.find(item => (item.id == e.dataTransfer.getData("cardHero")));
+        
         addToCompare(droppedHeroId,id);
         e.dataTransfer.clearData();
-
     }
+    
     return (
         <div className="compareHeroes">
            <div className="comparedPart">
@@ -101,8 +98,7 @@ export const CompareHeroes = (props) => {
                     </div>
                 </div>
                 <div className="statsSelectedHeroes">
-                    {(!unSetItem.comparedHero2 || !unSetItem.comparedHero1) ? <h2 className="noData">{t("no_data")}</h2> :
-                        
+                    {(!unSetItem.comparedHero2 || !unSetItem.comparedHero1) ? <h2 className="noData">{t("no_data")}</h2> :                
                        <table className="statsTable">
                            <tr>
                                <td>{unSetItem.comparedHero1.base_str}</td>
@@ -147,8 +143,6 @@ export const CompareHeroes = (props) => {
 
                        </table> 
                     }
-                    
-                     
                 </div>
            </div>
            <div className="heroesPart">
@@ -157,27 +151,27 @@ export const CompareHeroes = (props) => {
                 </div>
                 <div className="heroesListCmp">
                     {props.allHeroes.map(item => {
-                        if (item === unSetItem.comparedHero1 || item === unSetItem.comparedHero2 )
-                        {
-                        return (    
-                        <div  className="disabledItem" key={item.id}>
-                            <HeroCard item={item}></HeroCard>
-                        </div>)
-                        }
+                        if (item === unSetItem.comparedHero1 || item === unSetItem.comparedHero2 ) {
+                            return (    
+                            <div  className="disabledItem" key={item.id}>
+                                <HeroCard item={item}></HeroCard>
+                            </div>) 
+                        } 
                         else {
-                        return (
-                        <div  className="heroCmpItem" key={item.id} id = {item.id} onDragStart={(e) => { return (onDragHandler(e))}} draggable="true">
-                            <HeroCard item={item}></HeroCard>
-                        </div>
-                            )}
-                        })
-                    
+                            return (
+                            <div  className="heroCmpItem" key={item.id} id = {item.id} onDragStart={(e) => { return (onDragHandler(e))}} draggable="true">
+                                <HeroCard item={item}></HeroCard>
+                            </div>
+                                )
+                        }
+                    })
                     }
                 </div>
            </div> 
         </div>
     )
 }
+
 const HeroCard = ({item}) => {
     let urlRoot = "https://api.opendota.com";
     
@@ -195,6 +189,7 @@ const HeroCard = ({item}) => {
         </div>
     </>)
 }
+
 const CurrentHeroeIcon = (props) => {
     let currentHero;
     let urlAbilityRoot = "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/icons/hero_";

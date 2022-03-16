@@ -40,7 +40,6 @@ export const compareHeroesReducer = (state = initialState,action) => {
 export const setHeroesAC = (allHeroes) => ({type: SET_ALL_HEROES,allHeroes});
 export const addComparedHeroAC = (comparedHeroes) => ({type: ADD_COMPARED_HERO,comparedHeroes});
 export const deleteComparedHeroAC = (comparedHeroes) => ({type: DELETE_COMPARED_HERO,comparedHeroes});
-
 export const getHeroesThunkCreator = () => {
     return (dispatch) => {
         getHeroesApi().then(

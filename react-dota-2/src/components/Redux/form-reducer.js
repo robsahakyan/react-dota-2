@@ -5,8 +5,6 @@ const SET_CURRENT_ABILITY = "SET_CURRENT_ABILITY";
 const SET_CURRENT_SEARCHED_VALUE = "SET_CURRENT_SEARCHED_VALUE";
 const SET_FILTERED_HEROES = "SET_FILTERED_HEROES";
 
-
-
 let initialState = {
     abilityInfo: {
         abilityStatus: {
@@ -20,6 +18,7 @@ let initialState = {
     allHeroes: [],
     filteredHeroes: []
 }
+
 export const formReducer = (state = initialState,action) => {
     switch(action.type) {
         case SET_ALL_HEROES:
@@ -53,7 +52,6 @@ export const setHeroesAC = (allHeroes) => ({type: SET_ALL_HEROES,allHeroes})
 export const setCurrentAbilityAC = (abilityInfo) => ({type: SET_CURRENT_ABILITY,abilityInfo})
 export const setCurrentSearchedValueAC = (searchedValue) => ({type:SET_CURRENT_SEARCHED_VALUE,searchedValue})
 export const setFilteredHeroesAC = (filteredHeroes) => ({type: SET_FILTERED_HEROES,filteredHeroes})
-
 export const getHeroesThunkCreator = () => {
     return (dispatch) => {
         getHeroesApi().then(

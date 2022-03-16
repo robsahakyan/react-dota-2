@@ -70,24 +70,22 @@ const FilterSection = (props) => {
         </div>
         <div className="Attribute">
             <h3 className="AttributeLabel">{t("attribute")}</h3>      
-    <form className="AttributeForm">
-        <input onClick={resetChecked}  checked={checked.abilityStatus.Agility} onChange={changeRadio} disabled = {isDisabled} type="radio" name="AttributeRadio" id="Agility" value="Agility" className="RadioInput" />
-        <label htmlFor="Agility" className="RadioLabel">
-        <img className="AttributeIcons" src={"https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/herogrid/filter-agi-active.png"} alt="Agility"></img>
-        </label>
+            <form className="AttributeForm">
+                <input onClick={resetChecked}  checked={checked.abilityStatus.Agility} onChange={changeRadio} disabled = {isDisabled} type="radio" name="AttributeRadio" id="Agility" value="Agility" className="RadioInput" />
+                <label htmlFor="Agility" className="RadioLabel">
+                <img className="AttributeIcons" src={"https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/herogrid/filter-agi-active.png"} alt="Agility"></img>
+                </label>
 
-        <input onClick={resetChecked}  checked={checked.abilityStatus.Strength} onChange={changeRadio} disabled = {isDisabled} type="radio" name="AttributeRadio" id="Strength" value="Strength" className="RadioInput" />
-        <label htmlFor="Strength" className="RadioLabel">
-        <img className="AttributeIcons" src={"https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/herogrid/filter-str-active.png"} alt="Strength"></img>
-        </label>
+                <input onClick={resetChecked}  checked={checked.abilityStatus.Strength} onChange={changeRadio} disabled = {isDisabled} type="radio" name="AttributeRadio" id="Strength" value="Strength" className="RadioInput" />
+                <label htmlFor="Strength" className="RadioLabel">
+                <img className="AttributeIcons" src={"https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/herogrid/filter-str-active.png"} alt="Strength"></img>
+                </label>
 
-        <input  onClick={resetChecked}  checked={checked.abilityStatus.Intelligence} onChange={changeRadio} disabled = {isDisabled} type="radio" name="AttributeRadio" id="Intelligence" value="Intelligence" className="RadioInput" />
-        <label htmlFor="Intelligence" className="RadioLabel">
-        <img className="AttributeIcons" src={"https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/herogrid/filter-int-active.png"} alt="Intelligence"></img>
-        </label>
-    </form>
-   
-
+                <input  onClick={resetChecked}  checked={checked.abilityStatus.Intelligence} onChange={changeRadio} disabled = {isDisabled} type="radio" name="AttributeRadio" id="Intelligence" value="Intelligence" className="RadioInput" />
+                <label htmlFor="Intelligence" className="RadioLabel">
+                <img className="AttributeIcons" src={"https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/herogrid/filter-int-active.png"} alt="Intelligence"></img>
+                </label>
+            </form>
         </div>
         <div className="Search">
             <GoSearch className="SearchIcon"/>
@@ -101,8 +99,5 @@ const FilterSection = (props) => {
         </>
     )
 }
-
-
   
-
 export default FilterSection;

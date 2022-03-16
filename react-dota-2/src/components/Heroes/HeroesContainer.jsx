@@ -13,7 +13,6 @@ let mapStateToProps = (state) => {
 }
 
 const HeroesContainer = (props) => {
-   
 
     return <HeroesAndFilterSections
         allHeroes = {props.allHeroes}

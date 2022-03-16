@@ -42,12 +42,12 @@ import { useTranslation } from "react-i18next";
     const currentLanguageCode = localStorage.getItem('i18nextLng') || 'en';
     const currentLanguageName = languages.find(lng => lng.code === currentLanguageCode).name;
      
-    useEffect(()=> {
-        return (()=> {
-            window.addEventListener('resize',(() => {changeWidth(window.innerWidth)}));
-             showMenu.current.style.width = `${width}px`;
-        })
-    },[width])
+    // useEffect(()=> {
+    //     return (()=> {
+    //         window.addEventListener('resize',(() => {changeWidth(window.innerWidth)}));
+    //          showMenu.current.style.width = `${width}px`;
+    //     })
+    // },[width])
 
     const menuClickHnadler = () => {  
             header.current.style["padding-inline"] = "0";
@@ -85,10 +85,7 @@ import { useTranslation } from "react-i18next";
                 <CurrentLink  
                     to="/compareheroes" 
                     label={t("compare_heroes")}
-                />
-    
-
-          
+                /> 
             <div className="item-4">
                 <div>
                     <button id="droppedLng">
@@ -160,11 +157,9 @@ import { useTranslation } from "react-i18next";
                 </div>
             </div>
         </div>
-    </header>
-           
+    </header>      
 );
 }              
-
 
 const CurrentLink = (props) => {
     const { t } = useTranslation();
@@ -179,13 +174,5 @@ const CurrentLink = (props) => {
         </div>
     );
 }
-
-
-              
-           
-
-
-
-
-
+                        
 export default Header;

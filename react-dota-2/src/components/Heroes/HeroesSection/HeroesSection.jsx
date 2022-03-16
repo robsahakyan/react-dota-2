@@ -36,9 +36,9 @@ const ShowItems = (props) => {
           ))}
       </>
     );
-  }
-  else if(props.searchedValue) {  
+  } else if(props.searchedValue) {  
      let filteredArray = props.allHeroes.filter(e => e.localized_name.toLowerCase().startsWith(props.searchedValue.toLowerCase()))
+        
         if (filteredArray.length) {
           return (
             <>
@@ -83,7 +83,6 @@ const CurrentHeroeIcon = (props) => {
         <img className="AbilityOnHover" src={currentHero} alt={props.currentAbility}/>
     )
 }
-
 
 export const HeroItem = ({item}) => {
   const urlRoot = "https://api.opendota.com";

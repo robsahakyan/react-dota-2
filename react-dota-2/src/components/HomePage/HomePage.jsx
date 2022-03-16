@@ -46,7 +46,6 @@ export const HomePage = () => {
         })
     },[])
 
-    
     return (
         <div className="homePage">
             <div className="videoPart">
@@ -105,8 +104,7 @@ export const HomePage = () => {
                             {t("view_all_heroes")}
                         </NavLink>
                     </div>
-                </div>
-               
+                </div>              
             </div>
         </div>)
 }

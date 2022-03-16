@@ -4,8 +4,6 @@ import FilterSection from "./FilterHeroes/FilterSection";
 import HeroesSection from "./HeroesSection/HeroesSection";
 import Description from "./Description/Description"
 
-
-
 const HeroesAndFilterSections = (props) => {
 
     useEffect(()=> {

@@ -1,0 +1,44 @@
+.footer {
+    height: 12rem;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+
+}
+.items {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    align-self: center;
+    gap: 12rem;
+    margin-top: 3.5rem;
+}
+.footerItem-2 > a {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+    letter-spacing: 0.3rem;
+}
+
+.footerItem-1 img {
+    width: 6.5rem;
+    height: 2rem;
+}
+.footerItem-2 img {
+    width: 9rem;
+    height: 2rem;
+}
+.parDiv {
+    display: flex;
+    justify-content: center;
+}
+.footersPar {
+    color: dimgray;
+    text-align: center;
+    text-transform:none;
+    max-width: 28rem;
+
+}

@@ -1,0 +1,76 @@
+.HeroesList {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    position: relative;
+    top: 1rem;
+    margin-bottom: 2rem;
+    animation-name: HeroesListMove;
+    animation-duration: 1s;
+    place-content: center;
+}
+.ImageSection {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+}
+.ImgHeroes {
+    margin: 0.4rem;
+    width: 14rem;
+    height: 8rem;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
+}
+.ImageSection:hover {
+    transform: scale(1.3);
+    transition: 0.5s;
+}
+.ImageOverlay {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    color: white;
+    padding-left: 1rem;
+    line-height: 1.5rem;
+    text-transform: uppercase;
+    font-family: system-ui;
+    font-size: smaller;
+    opacity: 0;
+    transform: translateY(1rem);
+    gap: 0.2rem;
+    transition: transform 0.1s;
+    filter: drop-shadow(2px 4px 6px black);
+
+}
+.ImageSection:hover > .ImageOverlay{
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.AbilityOnHover {
+    height: 1.7rem;
+    width: 1.7rem;
+    
+}
+.HeroNameOnHover {
+    font-weight: 700;
+    font-size: large;
+}
+.emptyFilterdHeading
+{
+    color: whitesmoke;
+    font-family: serif;
+    letter-spacing: 0.2rem;
+    padding-top: 4.5rem;
+    font-size: 5vw;
+    font-weight: 400;
+    font-family: system-ui; 
+
+}
+.emptyFilteredDiv {
+    width: 100%;
+    text-align: center;
+}
+@keyframes HeroesListMove {
+    from {top: 8rem; opacity: 0;}
+    to {top: 1rem; opacity: 1;}
+}

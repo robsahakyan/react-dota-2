@@ -1,0 +1,310 @@
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-inline: 2rem;
+    align-items: center;
+    flex-shrink: 0;
+    color:white;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold; 
+    position: relative;
+    z-index: 1;
+}
+.item-1 >a {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+    letter-spacing: 0.3rem;
+
+
+}
+.item-1 {
+    flex-grow: 0.4;
+    opacity: 0.8;
+}
+.item-1 img {
+    width: 2.5rem;
+    height: 2.5rem;
+}
+.item-2 {
+    display: flex;
+    flex-grow: 0.3;
+    font-size: large;
+    font-family: system-ui;
+}
+.item-3 {
+    display: flex;
+    flex-grow: 1; 
+    font-size: large;
+    font-family: system-ui;
+} 
+.item-4 {
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    position: relative;
+    height: 2rem;
+}
+
+.item-2 > a {
+    color: white;
+    text-decoration: none;
+    letter-spacing: 0.2rem;
+    opacity: 0.8;
+
+}
+.item-3 > a {
+    color: white;
+    text-decoration: none;
+    letter-spacing: 0.2rem;
+    opacity: 0.8;
+
+}
+.item-5 > a {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    border-style: outset so;
+    border:solid;
+    border-radius: 0.5rem;
+    border-color: rgb(199, 197, 196);
+    padding: 1rem 2rem;
+    font-family: system-ui;
+    font-weight: inherit;    
+    cursor: pointer;
+    align-items: center;  
+} 
+.item-5 {
+    display: flex;
+    flex-grow: 0.1;
+    justify-content: center;
+    font-size: 1.3rem;
+}
+#active {
+    border-bottom: #ff4500d9;
+    padding: 0.2rem;
+    border-bottom-style: solid;
+    opacity: 1;
+}
+.item-2 > a:hover {
+    opacity: 1;
+}
+.item-3 > a:hover {
+    opacity: 1;
+}
+.item-1:hover {
+    opacity: 1;
+}
+.item-5 >a:hover {
+    border-color:#ff4500d9;
+    margin-bottom: 0.2rem;
+    transition: 0.2s;
+}
+#droppedLng {
+    background-color: unset;
+    border: unset;
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    font-family: 'Times New Roman', Times, serif;
+    color: white;
+    font-weight: bold; 
+    gap: 0.2rem;
+    cursor: pointer;
+}
+ul, li {
+    display: none;
+    z-index: 1;
+    
+}
+li > button {
+    background-color: unset;
+    border: unset;
+    color: rgb(58, 54, 54);
+    padding: 0.4rem;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    gap: 0.3rem;
+    width:100%;
+    padding-left: 1rem;
+
+}
+ul {
+    position: absolute;
+    background-color: white;
+    margin-block-start: 0.2rem;
+    padding-inline-start: 0;
+    width: 10rem;
+    margin-inline: 0.8rem;
+    
+}
+li {
+    width: 100%;
+
+}
+.item-4:hover ul, li {
+    display: block;
+}
+.changeLanguageMenu:hover ul, li {
+    display: block;
+}
+.imgFlag {
+    height: 1rem;
+    width: 1.8rem;
+}
+
+button:hover {
+background-color: #ddd;
+}
+button:disabled {
+    cursor: auto;
+    pointer-events: none;
+    color: gray;
+}
+.menuDiv {
+    display: none;
+    
+}
+.menuIcon {
+    display: none;
+    font-size: 4.5rem;
+    opacity: 0.6;
+    cursor: pointer;
+}
+.menuIcon:hover {
+    opacity: 1;
+    transition: 0.3s;
+}
+.menuProps {
+    display: none;
+    height: 0%;
+    background-color: black;
+    position: fixed;
+    overflow-y: hidden;
+    animation-name: showMenu;
+    animation-duration: 0.7s;
+}
+.closeIcon {
+    color: aliceblue;
+    font-size: 3rem;
+    cursor: pointer;
+}
+.topPartMenu {
+    position: relative;
+    top: 0.5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-inline: 2rem;
+}
+.imgDotaMenu {
+    width: 12rem;
+    height: 3rem;
+}
+.linksMenuDiv {
+    position: relative;
+    top: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #1b1b1b;
+}
+
+.linksMenuDiv > a {
+    font-size: xx-large;
+    padding-block: 0.1rem;
+    text-decoration: none;
+    color: aliceblue;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-inline: 2rem;
+    border-bottom: solid 0.001rem;
+}
+.ulLngMenu {
+    margin-block-start: 1.5rem;
+}
+.changeLanguageMenu {
+    padding: 2rem;
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+    height: fit-content;
+    align-self: center;
+}
+#droppedLngMenu {
+    background-color: unset;
+    border: unset;
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    font-family: 'Times New Roman', Times, serif;
+    color: white;
+    font-weight: bold; 
+    gap: 0.2rem;
+    cursor: pointer;
+    font-size: 1.5rem;
+    height: fit-content;
+} 
+.pFFD {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.playForFreeMenu {
+    position: relative;
+    top: 5rem;
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    border: 3px solid #ffffff50;
+    border-radius: 0.5rem;
+}
+.playForFreeMenu > a {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    padding: 1rem 2rem;
+    font-family: system-ui;
+    font-weight: bold;
+    cursor: pointer;
+    align-items: center;
+    font-size: 1.5rem;
+}
+.playForFreeMenu:hover {
+    top: 4rem;
+    border-color:#ff4500d9;
+    transition: 0.2s;
+}
+@media screen and (max-width: 1080px) {
+    .dotaNameOnHeader {
+        display: none;
+    }
+    .item-5 {
+        display: none;
+    }
+    .item-1 img {
+        width: 3.5rem;
+        height: 3.5rem;
+    }
+  }
+@media screen and (max-width: 750px) {
+    .item-2 , .item-3, .item-4 {
+        display: none;
+    }
+   
+    .menuDiv {
+        display: block;
+    } 
+   .menuIcon {
+       display: block;
+   }
+}
+@keyframes showMenu {
+    from {height: 0%;}
+    to {height: 100%;}
+  }

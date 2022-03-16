@@ -1,0 +1,278 @@
+.homePage {
+    width: 100%;
+    position: relative;
+    top: -8rem;
+    display: flex;
+    flex-direction: column;
+    
+}
+.videoPart {
+    width: 100%;
+    height: 45vw;
+    position: absolute;
+    z-index: -1;
+    margin-top: 0rem;
+}
+video {
+    height: 45vw;
+    width: 100%;
+    object-fit: cover;
+    overflow: hidden;
+}
+.playFor {
+    margin-left: 8vw;
+    margin-top: 8rem;
+    height: 30rem;
+    display: flex;
+    flex-direction: column;
+    animation-name: playForMove;
+    animation-duration: 1s;
+}
+.descriptionForPlay {
+    color: aliceblue;
+    font-size: 4.5rem;
+    max-width:min-content;
+    font-family:'Times New Roman', Times, serif;
+    font-weight: bold;
+}
+.distructoid {
+    font-family: "Radiance",sans-serif;
+    letter-spacing: 2px;
+    color: #ffffff90;
+    font-weight: 600
+}
+.playForFreeHm {
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    border: 3px solid #ffffff50;
+    border-radius: 0.5rem;
+
+}
+.playForFreeHm > a {
+    color: white;
+    gap: 0.4rem;
+    text-decoration: none;
+    display: flex;
+    padding: 1rem 2rem;
+    font-family: system-ui;
+    font-weight: bold;    
+    cursor: pointer;
+    align-items: center;
+    font-size: 1.5rem;
+}
+.playForFreeHm:hover {
+    margin-top: 0.5rem;
+    border-color:#ff4500d9;
+    transition: 0.2s;
+
+}
+.battleOfTheAncientsPart {
+    position: relative;
+    margin-top: 5vw;
+    min-height: 800px;
+
+}
+.battleOfTheAncientsPart::before {
+    content: "";
+    width: 100%;
+    max-width: 100%;
+    min-height: 800px;
+    background-size: 3500px;
+    background-position: center top;
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    background-image: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react//home/radiant_dire5.jpg");
+    filter:brightness(0.5)
+}
+.joinTheBattle {
+    position: relative;
+    bottom: -10vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;    
+    color: #e2dace;
+    text-align: center;
+    height: 35vw;
+}
+.hrBattlePart {
+    width: 80px;
+    height: 3px;
+    min-height: 3px;
+    background-color: #ff6046;
+    border-radius: 1px;
+}
+.minor1 {
+    font-size: 5.8rem;
+    color: #E2DACE90;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+.minor2 {
+    font-size: 7rem;
+    color: #b2aea8;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.battleName {
+    font-size: 5.8rem;
+    font-family: Reaver,serif;
+    font-weight: 700;
+    color: #e2dace;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    line-height: 105%;
+}
+.battlePartText {
+    width: 66rem;
+    font-size: 1.6rem;
+}
+.LinkDiv , .LinkHeroDiv {
+    margin-top: 1rem;
+    position: relative;
+    top: 0rem;
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    border: 3px solid #ffffff50;
+    border-radius: 0.5rem;
+}
+.LinkDiv > a , .LinkHeroDiv > a {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    padding: 1rem 2rem;
+    font-family: system-ui;
+    font-weight: bold;    
+    cursor: pointer;
+    align-items: center;
+    font-size: 1.5rem;
+
+  
+}
+.LinkDiv:hover {
+    margin-top: 0.5rem;
+    border-color:#ff4500d9;
+    transition: 0.2s;
+}
+.chooseYourHero {
+    position: relative;
+    min-height: 800px;
+
+}
+.chooseYourHero::before {
+    content: "";
+    width: 100%;
+    max-width: 100%;
+    min-height: 800px;
+    background-size: 3500px;
+    background-position: center top;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    position: absolute;
+    background-image: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react//home/heroes_full.jpg");
+    filter: brightness(0.5);
+}
+
+.chooseYourHeroImg {
+    width: 100%;
+    object-position: 50%;
+}
+.chooseText {
+    width: 66rem;
+    font-size: 1.6rem;
+}
+.choose {
+    font-size: 6.5rem;
+    font-family: Reaver,serif;
+    font-weight: 700;
+    color: #e2dace;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    line-height: 105%;
+}
+.chooseYourHero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: -10rem;
+    color: antiquewhite;
+    text-align: center;
+}
+.chooseYourHeroContent {
+    position: relative;
+    top: 10rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.LinkHeroDiv:hover {
+    top: -0.5rem;
+    border-color:#ff4500d9;
+    transition: 0.2s;
+}
+@keyframes playForMove {
+    from {margin-left: 3vw; opacity: 0;}
+    to {margin-left: 8vw; opacity: 1; }
+}
+@media screen and (max-width:1300px) {
+    .descriptionForPlay {
+        font-size: 3.8rem;
+    } 
+    .playFor {
+        gap: 2rem;
+        animation-duration: 0.4s;
+    } 
+    .minor1, .battleName {
+        font-size: 5rem;
+    }
+    .battlePartText {
+        width: 55rem;
+        font-size: 1.4rem;
+    }
+}
+@media screen and (max-width:1000px) {
+    .descriptionForPlay {
+        font-size: 3rem;
+    }
+    .minor1, .minor2, .battleName {
+        font-size: 4.5rem;
+    }
+    .chooseText {
+        width: 50rem;
+        font-size: 1.4rem;
+    }
+    .choose {
+        font-size: 5rem;
+    }
+    .battlePartText {
+        width: 70vw;
+        font-size: 2.7vw;
+    }
+}
+@media screen and (max-width: 800px) {
+    .descriptionForPlay {
+        font-size: 2.5rem;
+    }
+    .minor1, .battleName , .minor2 , .choose {
+        font-size: 3rem;
+    }
+
+    .chooseText , .battlePartText {
+        width: 70vw;
+        font-size: 1.2rem;
+    }
+    .LinkDiv > a , .LinkHeroDiv > a {
+        font-size: 1rem;
+    } 
+    
+}

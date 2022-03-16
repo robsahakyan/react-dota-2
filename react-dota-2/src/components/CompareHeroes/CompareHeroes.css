@@ -1,0 +1,301 @@
+.compareHeroes {
+    width: 100%;
+    display: flex;
+    margin-top: 0;
+    flex-direction: row;
+    animation-name: moveCompToTop;
+    animation-duration: 1s;
+}
+.comparedPart {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    align-items: center;
+}
+.selectedHeroes {
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    width: 65%;
+    margin-top: 2rem;
+}
+.statsSelectedHeroes {
+    width: 35rem;
+    height: 20rem;
+    margin: auto;
+    margin-top: 5rem;
+    background-color: #2e3235;
+    display: flex;
+    justify-content: center;
+}
+#selected1 , #selected2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 12rem;
+    height: 14rem;
+    border-radius: 1rem;
+    border:solid gray 0.15rem;
+    background-color: #2e3235;
+    position: relative;
+    z-index: 0;
+}
+.activeCmp {
+    cursor: pointer;
+    border: solid 0.1rem;
+}
+.addHeroHeading {
+    font-size: 1.5rem;
+    align-self: center;
+    margin-block-start: 0rem;
+    color: aliceblue;
+}
+.addHeroIcon {
+    align-self: center;
+    font-size: 7rem;
+    color: aliceblue;
+}
+.noData {
+    align-self: center;
+    color: aliceblue;
+}
+.heroesPart {
+    width: 50%;
+}
+.heroesListCmpHeadingDiv {
+    background-color: #203d48;
+    width: 90%;
+}
+.heroesListCmpHeading {
+    color: aliceblue;
+    font-size: 1.5rem;
+    margin-left: 1rem;
+    margin-block-start: 1rem;
+    margin-block-end: 0;
+}
+.heroesListCmp {
+    width: 90%;
+    height: 40rem;
+    background-color: #13272f;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    justify-content: center;
+}
+.heroCmpItem {
+   
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: 0.4rem;
+    width: 12rem;
+    height: 14rem;
+    border: solid 0.1rem;
+    border-radius: 1.1rem;
+    background-color: #2e3235;
+    cursor: pointer;
+}
+.imgHeroCmp {
+    border-radius: 1rem 1rem 0 0;
+    width: 12rem;
+    height: 10rem;
+}
+.abilityAttTypeAndImg {
+    display: flex;
+    flex-direction: column;
+}
+.abilityAndAttType {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.abilityIconCmp {
+    margin-top: 0.2rem;
+    width: 2rem;
+    height: 2rem;
+}
+.iconHeroCmp {
+    margin-top: 0.2rem;
+}
+.cmpHeroHeading {
+    background-color: black;
+    height: 1.7rem;
+    margin-top: 0.1rem;
+    border-radius: 0rem 0rem 0.8rem 0.8rem;
+}
+.nameHeroCmp {
+    height: 0.1rem;
+    text-align: center;
+    color: aliceblue;
+    margin-block-start: 0;
+    font-size: 1.3rem;
+}
+.attackTypeIcon {
+    color: aliceblue;
+    font-size: 1.5rem;
+    margin-top: 0.5rem;  
+}
+.heroesListCmp::-webkit-scrollbar {
+    width: 1rem;
+    height: 2rem;
+}
+.heroesListCmp::-webkit-scrollbar-thumb {
+    background: black; 
+    border-radius: 10px;
+}  
+.nameOfComparison {
+    color: #555;
+    width: 35%;
+}
+.statsTable {
+    width: 100%;
+    border-collapse: collapse;
+    height: 100%;
+
+}
+.evenRow {
+    background-color:#13272f;
+    width: 100%;
+}
+tr {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height: calc(20rem/8);
+    align-items: center;
+}
+.unsetCard {
+    text-align: center;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+td {
+    flex-grow: 1;
+    text-align: center;
+    font-size: large;
+    color: aliceblue;
+}
+.disabledItem {
+    opacity: 0.4;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: 0.4rem;
+    width: 12rem;
+    height: 14rem;
+    border: solid 0.1rem;
+    border-radius: 1.1rem;
+    background-color: #2e3235;
+    filter: grayscale(1);
+}
+@keyframes moveCompToTop {
+    from {margin-top: 5rem; opacity: 0;}
+    to {margin-top: 0rem; opacity: 1;}
+}
+@media screen and (max-width: 1250px) {
+    .compareHeroes {
+        flex-direction: column-reverse;
+        flex-wrap: wrap;
+    }
+    .heroesPart {
+        width: 100%;
+        text-align: -webkit-center;
+    }
+    .heroesListCmp {
+        height: 25rem;
+    }
+    .comparedPart {
+        width: 100%;
+    }
+    .heroCmpItem, .disabledItem {
+        width: 9rem;
+        height: 10.5rem;
+    }
+    .imgHeroCmp {
+        width: 9rem;
+        height: 6.5rem;
+    }
+    .nameHeroCmp {
+        font-size: 0.9rem;
+    }
+    .DroppedCard {
+        width: 12rem;
+        height: 14rem;
+    }
+    .DroppedCard > .abilityAttTypeAndImg > .imgHeroCmp {
+        width: 12rem;
+        height: 9.5rem;
+    }
+    .DroppedCard > .cmpHeroHeading {
+        margin-top: 0.4rem;
+        height: 1.9rem;
+    }
+    .DroppedCard > .cmpHeroHeading > .nameHeroCmp {
+        font-size: 1.2rem;
+    }
+    .statsSelectedHeroes {
+        width: 40rem;
+        margin-bottom: 5rem;
+    }
+}
+@media screen and (max-width: 670px) {
+    .heroesListCmp {
+        height: 20rem;
+    }
+    .heroCmpItem, .disabledItem {
+        width: 6rem;
+        height: 7rem;
+    }
+    .imgHeroCmp {
+        width: 6rem;
+        height: 4.5rem;
+    }
+    .nameHeroCmp {
+        font-size: 0.7rem;
+    }
+    .iconHeroCmp {
+        width: 1rem;
+        height: 1rem;
+    }
+    .attackTypeIcon {
+        margin-top: 0.2rem;
+        font-size: 0.8rem;
+    }
+    .cmpHeroHeading {
+        margin-top: 0.3rem;
+        height: 1rem;
+    }
+    .abilityIconCmp {
+        width: 1rem;
+        height: 1rem;
+    }
+    .DroppedCard > .abilityAttTypeAndImg > .abilityAndAttType > .abilityIconCmp {
+        width: 2rem;
+        height: 2rem;
+    }
+    .DroppedCard > .abilityAttTypeAndImg > .abilityAndAttType > .attackTypeIcon {
+        font-size: 1.6rem;
+    }
+    .DroppedCard > .abilityAttTypeAndImg > .abilityAndAttType > .iconHeroCmp {
+        width: 2rem;
+        height: 2rem;
+    }
+    .statsSelectedHeroes {
+        width: 35rem;
+        margin-bottom: 5rem;
+    }
+    .selectedHeroes {
+        width: 85%;
+    }
+}
+@media screen and (max-width: 600px) {
+    .statsSelectedHeroes {
+        width: 25rem;
+    }
+    
+}

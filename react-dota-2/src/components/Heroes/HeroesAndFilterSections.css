@@ -1,0 +1,37 @@
+.Sections {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    
+}
+.FilterSection {
+    
+    background: #70828f;
+    background: -webkit-linear-gradient(to left, #778d9c, #203A43, #0F2027);
+    background: linear-gradient(to left, #3d5f6c, #213f49, #0F2027);
+    min-height: 4.5rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    position: relative;
+    color: white;
+    justify-content: space-around;
+    padding-inline: 2rem;
+    letter-spacing: 0.2rem;
+    font-size: 1.2rem;
+    align-self: center;
+    align-items: center;
+    width: 78vw;
+    border-radius: 0.5rem;
+}
+@media screen and (max-width: 830px) { 
+    .FilterSection {
+        padding: 1rem;
+        gap: 0.5rem;
+    }
+    
+}
+
+

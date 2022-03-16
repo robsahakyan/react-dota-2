@@ -1,0 +1,70 @@
+.FH {
+    display: flex;
+    flex-grow: 0.8;
+    font-size: smaller;
+    
+}
+
+.Attribute {
+    display: flex;
+    flex-grow: 0.7;
+    align-items: center;
+}
+
+.AttributeLabel {
+    color: #808fa6;
+    font-weight: unset;
+    font-size: smaller;
+    margin-right: 0.5rem;
+}
+.AttributeForm {
+    display: flex;
+    position: relative;
+    top: 0.2rem;
+}
+.RadioInput {
+    display: none;
+}
+.RadioLabel {
+    margin: -0.1rem
+}
+.RadioInput:checked + .RadioLabel>img {
+    opacity: 1;
+}
+.AttributeIcons {
+    opacity: 0.5;    
+    cursor: pointer;
+    width: 2.9rem;    
+}
+
+.Search {
+    display: flex;
+    justify-content: space-around;
+    background-color:  #2b303b;
+    color: dimgrey;
+    align-items: center;
+    width: 16rem;
+    height: 3rem;
+}
+.SearchIcon {
+    font-size: 1.5rem;
+}
+
+.SearchBar{
+    background-color:  #2b303b;
+    border:thin;
+    width: 12rem;
+    height: 1.8rem;
+    color: white;
+}
+.SearchBar:focus{
+    background-color:dimgrey;
+    outline: thin;
+}
+@media screen and (max-width:830px) {
+     .Attribute , .FH {
+        width: 100%;
+        justify-content: center;
+    }
+    
+}

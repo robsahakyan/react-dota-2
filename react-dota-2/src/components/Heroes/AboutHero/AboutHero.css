@@ -1,0 +1,508 @@
+
+.aboutHero {
+    display: flex;
+    flex-direction: row;
+    margin-top: 2rem;
+    width: 100%;
+    
+}
+.rotatedDiv {
+    height: 6rem;
+    width: 10rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    transform: rotate(270deg);
+    animation-name: rotatedDivMove;
+    animation-duration: 1s;
+    gap: 0.3rem;
+    margin-top: 30rem;
+    opacity: 1;
+    margin-left: 5rem;
+    transform-origin: left;
+
+}
+
+.rotatedImg {
+    height: 1.5rem;
+}
+.rotatedHeading {
+    letter-spacing: 0.2rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-left: 0.1rem;
+    text-transform: uppercase;
+    inline-size: max-content;
+}
+.verticalLine {
+    border-left: 70vw solid #555;
+    height: 0.1rem;
+}
+.idNumber {
+    color: #555;
+    font-size: large;
+}
+.descriptionHero {
+    flex-grow: 0.6;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    right: 2rem;
+    margin-left: 0rem;
+    margin-top: -2rem;
+    animation-name: descriptionHeroMove;
+    animation-duration: 1s;
+}
+h2,h3 {
+    color: whitesmoke;
+}
+.abilityIconAndName {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.3rem;
+    margin-top: 2.5rem;
+
+}
+.abilityHeading {
+    font-weight: 200;
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+}
+.nameHeading {
+    font-size: 4rem;
+    margin-top: -1rem;
+    font-family: Arial, Helvetica, sans-serif;
+    color: whitesmoke;
+    text-transform: uppercase;
+    max-width: fit-content;
+}
+.abilityIconHeading {
+    width: 2rem;
+    height: 2rem;
+}
+.imageDiv {
+    margin-top: -2rem;
+}
+.imgHero {
+    width: 25rem;
+    height: 22rem;
+}
+.attTypeHeading {
+    color: #959595;
+    font-weight: 500;
+    letter-spacing: 0.1rem;
+    font-size: medium;
+    text-transform: uppercase;
+}
+.attackTypeIconAndLabel {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: whitesmoke;
+    gap: 0.7rem;
+    margin-top: -1.7rem;
+    text-transform: uppercase;
+}
+.attackTypeIcon {
+    font-size: 1.5rem;  
+    margin-top: 0.5rem;  
+}
+.attackTypeLabel {
+    font-weight: 500;
+}
+.HeroStats {
+    flex-grow: 0.01;
+    background-color: #2e3233;
+    display: flex;
+    flex-direction: column;
+    width: 30rem;
+    height: 38rem;
+    margin-left: -2rem;
+    animation-name: HeroStatsMove;
+    animation-duration: 1s;
+    justify-content: space-around;
+}
+.Parts {
+    display: flex;
+    flex-direction: column; 
+}
+.attributesDiv {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.attributesAndStats {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.2rem;
+}
+.rolesList {
+
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+    row-gap: 0.8rem;
+    margin-top: 0.5rem;
+    
+}
+.lineHr {
+    width: 10rem;
+    height: 0.01rem;
+    background-color: #4f4f4f;
+    border: none;
+}
+.range {
+    height: 0.35rem;
+    border-left: 8rem solid #4c4c4c;
+    transition-duration: 2s;
+
+}
+.rangeIncludes {
+    height: 0.35rem;
+    border-left: 8rem solid #fff;
+    box-shadow: 0px 0px 10px #427ed1, 0px 0px 10px #427ed1;
+}
+.valueStats {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;  
+}
+.IconAndValue {
+    display: flex;
+    flex-direction: row;
+    gap: 0.4rem;
+}
+.infoHeading {
+    place-self: center;
+    color: #969696;
+    font-size: 1.1rem;
+    letter-spacing: 0.2rem;
+    text-shadow: 1px 1px 2px #000;
+    text-transform: uppercase;
+    margin-top: 0.4rem;
+}
+.attributesAndStats > h4 {
+    color: #fff;
+    font-family: Reaver,serif;
+    font-size: 1.7rem;
+    font-weight: 600;
+    text-shadow: 1px 1px 2px #000;
+}
+.attributesAndStats > img {
+    width: 2rem;
+    height: 2rem;
+}
+.attributesAndStats > h6 {
+    color: #999;
+    font-size: 1rem;
+    text-shadow: 1px 1px 2px #000;
+    margin-top: 1.4rem;
+}
+
+.IconAndValue > img {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+.IconAndValue > div {
+    color: #fff;
+}
+.attPart, .defPart, .mobPart {
+    color: #969696;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    margin-top: 0.5rem;
+} 
+.rolesList > div > div {
+    color: #fff;
+    text-transform: none;
+}
+.rolesList > div {
+    display: flex;
+    flex-direction: column;
+    justify-self: start;
+    grid-gap: 0.2rem;
+}
+
+.nextLink {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #252525;
+    margin-top: 10rem;
+    height: 10rem;
+    align-self: flex-end;
+}
+.attDefMob {
+    text-transform: uppercase;
+}
+.boxesAllheroes {
+    width: 9vw;
+    height: 7vw;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.boxes {
+    width: 2.7vw;
+    height: 2.7vw;
+    background-color: #9e9fa0;
+}
+a.allHeroesLink:hover > div.boxesAllheroes > div.boxes {
+    background-color: aliceblue;
+    transition: 0.7s;
+}
+.prevHeroLink ,.nextHeroLink {
+    width: 45%;
+    display: flex;
+    flex-direction: row;
+    text-decoration: none;
+    text-transform: uppercase;
+    color:#fff;
+}
+.allHeroesLink {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-decoration: none;
+    text-transform: uppercase;
+    color:#fff;
+    align-items: center;
+    text-align-last: center;
+    width: 10%;
+    box-shadow: 0px 2px 8px  #000;
+}
+.linksInfo {
+    align-self: center;
+    width: 18rem;
+    text-align-last: center;
+}
+.linksImg {
+    position: relative;
+    width: 25rem;
+    
+}
+.futLinkName {
+    color: #9f9f9f;
+    font-size: 1rem;
+    letter-spacing: 0.1rem;
+    text-align: -webkit-center;
+}
+.futLinkHeroName {
+    color: #fff;
+    font-size: 2rem;
+    text-align: -webkit-center;
+}
+.futLinkAttType {
+    color: #ddd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.3rem;
+}
+.nextHeroLink {
+    flex-direction: row-reverse;
+}
+a.allHeroesLink > div {
+    width: 100%;
+    text-align: -webkit-center;
+}
+.attackTypeIconLink {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+.nextLink2 {
+    width: 150px;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 0.3rem;
+    margin-left: 2rem;
+    margin-top: 2rem;
+}
+.nextLinkLeft , .nextLinkRight {
+    width: 30px;
+    height: 60px;
+    border: 2px solid #fff;
+    transition-timing-function: ease-in-out;
+    transition-duration: .1s;
+    opacity: .4;
+    cursor: pointer;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.linkIcons {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+.nextLinkAll {
+    width: 4.5rem;
+    height: 2.25rem;
+    border: 2px solid #fff;
+    display: flex;
+    padding-inline: 0.6rem;
+    padding-block: 0.75rem;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    transition-property: opacity;
+    transition-timing-function: ease-in-out;
+    transition-duration: .1s;
+    opacity: .4;
+    cursor: pointer;
+}
+.boxes2 {
+    width: 16px;
+    height: 16px;
+    background-color: #fff;
+}
+.nextLinkLeft:hover ,.nextLinkRight:hover, .nextLinkAll:hover {
+    opacity: 1;
+}
+@keyframes rotatedDivMove {
+    from {margin-top: 20rem; opacity: 0;}
+    to {margin-top: 30rem; opacity: 1;}
+  }
+@keyframes descriptionHeroMove {
+    from {margin-top: 8rem; opacity: 0;}
+    to {margin-top: -2rem; opacity: 1;}
+}
+@keyframes HeroStatsMove {
+    from {margin-left: -10rem; opacity: 0;}
+    to {margin-left: -2rem; opacity: 1;}
+}
+@media screen and (max-width:1460px) {
+    .nextLink2 {
+        display: none;
+    }
+    .aboutHero {
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+    }
+}
+.linksImg {
+    width: 21rem;
+}
+@media screen and (max-width:1100px) {
+    .HeroStats {
+        width: 100%;
+        margin-left: 0rem;
+        flex-direction: row;
+        height: fit-content;
+        animation: none;
+    }
+    .lineHr {
+        display: none;
+    }
+    .Parts {
+        display: flex;
+        flex-direction: column;
+        border-right: solid 2px #4f4f4f;
+    }
+    .attributesDiv {
+        flex-direction: column;
+    }
+     #part3 {
+        width: 56%;
+    } 
+    #part2 {
+        width: 40%;
+    }
+    .rolesList {
+        gap: 0.5rem;
+        justify-content: space-evenly;
+        padding: 0.7rem;
+    }
+    .nextLink {
+        margin-top: auto;
+    }
+    .linksImg {
+        width: 15rem;
+    }
+}
+@media screen and (max-width: 900px) {
+    .futLinkAttType {
+        display: none;
+    }
+    .futLinkHeroName {
+        font-size: 1.5rem;
+        text-align: -webkit-center;
+    }
+    .linksImg {
+        width: 13rem;
+    }
+}
+@media screen and (max-width:750px) {
+    .descriptionHero {
+        position: unset;
+        align-items: center;
+    }
+    .rotatedDiv {
+        display: none;
+    }
+    .HeroStats {
+        flex-direction: column;
+    }
+    .Parts {
+        border: unset;
+        flex-direction: column;
+        width: 100%;
+    }
+    .attributesDiv {
+        flex-direction: row;
+    }
+    .lineHr {
+        display: block;
+    }
+    #part3 {
+        width: 100%;
+        padding-bottom: 2rem;
+    } 
+    #part2 {
+        width: 100%;
+        padding-inline: 1rem;
+    }
+    .prevHeroLink , .nextHeroLink {
+        flex-direction: column-reverse;
+    }
+    .futLinkHeroName, .futLinkAttType {
+        display: none;
+    }
+    .futLinkName {
+        position: relative;
+        bottom: 0.5rem;
+    }
+    .linksImg {
+        height: 8rem;
+        width: 100%;
+    }
+    .prevHeroLink , .nextHeroLink {
+        width: 30%;
+    }
+    .allHeroesLink {
+        width: 30%;
+    }
+}
+@media screen and (max-width: 510px) {
+    .linksImg {
+        height: 8rem;
+        width: 100%;
+    }
+    .imgHero {
+        width: 20rem;
+        height: 18rem;
+    }
+    .nameHeading {
+        font-size: 3.5rem;
+    }
+}

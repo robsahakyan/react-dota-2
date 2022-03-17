@@ -75,7 +75,7 @@
 }
 .heroesListCmp {
     width: 90%;
-    height: 40rem;
+    height: 40vw;
     background-color: #13272f;
     display: flex;
     flex-direction: row;

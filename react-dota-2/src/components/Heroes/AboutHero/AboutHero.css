@@ -382,6 +382,16 @@ a.allHeroesLink > div {
     from {margin-left: -10rem; opacity: 0;}
     to {margin-left: -2rem; opacity: 1;}
 }
+@media screen and (min-width: 2000px) {
+    .boxesAllheroes {
+        width: 10rem;
+        height: 7rem;
+    }
+    .boxes {
+        width: 2.7rem;
+        height: 2.7rem;
+    }
+}
 @media screen and (max-width:1460px) {
     .nextLink2 {
         display: none;
@@ -511,7 +521,9 @@ a.allHeroesLink > div {
         height: 18rem;
     }
     .nameHeading {
-        font-size: 3.5rem;
-        
+        font-size: 3.5rem;   
+    }
+    .futLinkName {
+        font-size: 0.8rem;
     }
 }

@@ -27,26 +27,25 @@ function App() {
                 path="/heroes"  
                 element = {<HeroesContainer/>}>
               </Route>
+              <Route
+                path="/"
+                element={<Navigate from = "/" to="/home"/>}>
+              </Route>
+              <Route
+                path="*"
+                element={<Navigate from = "/" to="/home"/>}>
+              </Route> 
+              <Route 
+                path="/compareheroes"
+                element = {<CompareHeroesContainer/>}>
+              </Route>
               {data.map(item => {
-
                 return (
                   <Route
                     path={`/heroes/${item.localized_name.toLowerCase().split(' ').join('')}`}
                     element = {<AboutHero currentHero = {item} allHeroes = {data}/>}>
                   </Route>)}
                 )}
-              <Route 
-                path="/compareheroes"
-                element = {<CompareHeroesContainer/>}>
-              </Route>
-              <Route
-                path="/"
-                element={<Navigate from = "/" to="/home"/>}>
-              </Route> 
-              <Route
-                path="*"
-                element={<Navigate from = "/" to="/home"/>}>
-              </Route>
           </Routes> 
         </div>
         <div className="rootFooter">
